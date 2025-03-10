@@ -6573,6 +6573,40 @@
     - filename: lolzinventor_Meta-Llama-3.1-8B-SurviveV3-Q4_K_M.gguf
       sha256: 7a8548655c4a0361de9cd5390be50e6b2c2375805f7952140cd27a93ec545dfc
       uri: huggingface://bartowski/lolzinventor_Meta-Llama-3.1-8B-SurviveV3-GGUF/lolzinventor_Meta-Llama-3.1-8B-SurviveV3-Q4_K_M.gguf
+- !!merge <<: *llama31
+  name: "llmevollama-3.1-8b-v0.1-i1"
+  icon: https://huggingface.co/fiveflow/LLMEvoLLaMA-3.1-8B-v0.1/resolve/main/assets/robot.jpeg
+  urls:
+    - https://huggingface.co/fiveflow/LLMEvoLLaMA-3.1-8B-v0.1
+    - https://huggingface.co/mradermacher/LLMEvoLLaMA-3.1-8B-v0.1-i1-GGUF
+  description: |
+    This project aims to optimize model merging by integrating LLMs into evolutionary strategies in a novel way. Instead of using the CMA-ES approach, the goal is to improve model optimization by leveraging the search capabilities of LLMs to explore the parameter space more efficiently and adjust the search scope based on high-performing solutions.
+
+    Currently, the project supports optimization only within the Parameter Space, but I plan to extend its functionality to enable merging and optimization in the Data Flow Space as well. This will further enhance model merging by optimizing the interaction between data flow and parameters.
+  overrides:
+    parameters:
+      model: LLMEvoLLaMA-3.1-8B-v0.1.i1-Q4_K_M.gguf
+  files:
+    - filename: LLMEvoLLaMA-3.1-8B-v0.1.i1-Q4_K_M.gguf
+      sha256: 4a1042b707499451c42acfbecb8319568c856f0c634aabe79c95d7a6436837ab
+      uri: huggingface://mradermacher/LLMEvoLLaMA-3.1-8B-v0.1-i1-GGUF/LLMEvoLLaMA-3.1-8B-v0.1.i1-Q4_K_M.gguf
+- !!merge <<: *llama31
+  name: "hyperllama3.1-v2-i1"
+  urls:
+    - https://huggingface.co/bunnycore/HyperLlama3.1-v2
+    - https://huggingface.co/mradermacher/HyperLlama3.1-v2-i1-GGUF
+  description: |
+    HyperLlama3.1-v2 is a merge of the following models using mergekit:
+    vicgalle/Configurable-Llama-3.1-8B-Instruct
+    bunnycore/HyperLlama-3.1-8B
+    ValiantLabs/Llama3.1-8B-ShiningValiant2
+  overrides:
+    parameters:
+      model: HyperLlama3.1-v2.i1-Q4_K_M.gguf
+  files:
+    - filename: HyperLlama3.1-v2.i1-Q4_K_M.gguf
+      sha256: b0357b1876898c485fe0532a8fdc10a4f5a190421bd573899710072558ba330b
+      uri: huggingface://mradermacher/HyperLlama3.1-v2-i1-GGUF/HyperLlama3.1-v2.i1-Q4_K_M.gguf
 - !!merge <<: *llama33
   name: "llama-3.3-magicalgirl-2.5-i1"
   icon: https://cdn-uploads.huggingface.co/production/uploads/633e85093a17ab61de8d9073/FGK0qBGmELj6DEUxbbrdR.png
@@ -11920,6 +11954,27 @@
     - filename: Triangulum-10B.Q4_K_M.gguf
       sha256: dd071f99edf6b166044bf229cdeec19419c4c348e3fc3d6587cfcc55e6fb85fa
       uri: huggingface://mradermacher/Triangulum-10B-GGUF/Triangulum-10B.Q4_K_M.gguf
+- !!merge <<: *llama3
+  name: "opencrystal-l3-15b-v2.1-i1"
+  icon: https://huggingface.co/Darkknight535/OpenCrystal-15B-L3-v2/resolve/main/Rohma_2024-08-30%4023h37m38s.jpg
+  urls:
+    - https://huggingface.co/Darkknight535/OpenCrystal-L3-15B-v2.1
+    - https://huggingface.co/mradermacher/OpenCrystal-L3-15B-v2.1-i1-GGUF
+  description: |
+    Automatically speaks as other NPCs.
+    Creative output.
+    Coherent responses.
+    Output feels similar to using Character.ai.
+    Improved adherence to prompts.
+    Reduced hallucinations (15B).
+    Capable of summarizing and generating image prompts well.
+  overrides:
+    parameters:
+      model: OpenCrystal-L3-15B-v2.1.i1-Q4_K_M.gguf
+  files:
+    - filename: OpenCrystal-L3-15B-v2.1.i1-Q4_K_M.gguf
+      sha256: b7db0a810771c856bd598b9a11f6aec6672019a4e18822af3a5957a03184296f
+      uri: huggingface://mradermacher/OpenCrystal-L3-15B-v2.1-i1-GGUF/OpenCrystal-L3-15B-v2.1.i1-Q4_K_M.gguf
 - &command-R
   url: "github:mudler/LocalAI/gallery/command-r.yaml@master" ### START Command-r
   name: "command-r-v01:q1_s"
